@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'iothubnxtdev'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_95486A1C97174904BE6D4BCF449BF17C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AC165D1FD2224AC99262E25771EF123A }}
           package: '*.jar'
