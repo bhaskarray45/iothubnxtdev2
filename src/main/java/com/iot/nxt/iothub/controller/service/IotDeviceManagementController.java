@@ -20,7 +20,7 @@ public class IotDeviceManagementController {
     @PostMapping("/device/add")
     public String addDevice(@RequestParam String deviceId) {
 
-        return iotDeviceManagerService.AddDevice(deviceId);
+        return iotDeviceManagerService.addDevice(deviceId);
     }
 
     @GetMapping("/device/get")

@@ -15,8 +15,7 @@ import org.springframework.stereotype.Service;
 public class D2CSendTelemetryService {
 
     public String sendEvent(D2CMessageBody d2cMessageBody) {
-        DeviceClient client = new DeviceClient(ApplicationConstants.IOT_HUB_CONN_STRING_DEVICE,
-                IotHubClientProtocol.MQTT);
+        DeviceClient client = new DeviceClient(ApplicationConstants.IOT_HUB_CONN_STRING_DEVICE, IotHubClientProtocol.MQTT);
 
         try {
             client.open(false);
@@ -29,7 +28,7 @@ public class D2CSendTelemetryService {
             client.sendEvent(msg);
             return "message sent successfully from device to cloud";
 
-        } catch (InterruptedException |IotHubClientException |JsonProcessingException e) {
+        } catch (InterruptedException | IotHubClientException | JsonProcessingException e) {
             e.printStackTrace();
             return "error sending message from device to cloud";
         }

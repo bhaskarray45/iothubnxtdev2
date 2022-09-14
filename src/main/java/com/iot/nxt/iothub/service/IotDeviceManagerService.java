@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class IotDeviceManagerService {
 
-    public String AddDevice(String deviceId) {
+    public String addDevice(String deviceId) {
         RegistryClient registryClient = new RegistryClient(ApplicationConstants.IOT_HUB_CONN_STRING);
 
         Device device = new Device(deviceId);
